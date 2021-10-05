@@ -77,9 +77,10 @@ suite('Unit Tests', function () {
       assert.isBelow(2 / 3, 1);
     });
     // #10
+    // .approximately(actual, expected, delta, [message]) 
     test('#approximately', function () {
-      assert.fail(weirdNumbers(0.5), 1, 0);
-      assert.fail(weirdNumbers(0.2), 1, 0);
+      assert.approximately(weirdNumbers(0.5), 1, 0.5);
+      assert.approximately(weirdNumbers(0.2), 1, 0.8);
     });
   });
 
